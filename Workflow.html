@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GE5227: Assignment 2</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script>defer src = "script.js"</script>
+</head>
+
+<body>
+    <h1> GE5527 / INTERNET GIS / ASSIGNMENT 2</h1>
+    <h3><i>The introduction and comparison between Interactive Legend and StoryMaps</i></h3>
+    <br>
+    <h3> WORKFLOW </h3>
+
+    <table class="styled-table" id="table2">
+        <tr>
+          <th>No.</th>
+          <th>Steps</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Datasets were sourced from various sources. Due to the lack of processing tools on the web version, the datasets were individually processed on ArcGIS Pro.</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>The Camp Boundary geodatabase contains all camps in Cox's Bazar. The area of this study focuses on Kutupalong Refugee Camp. Other camps were deleted. The file was then duplicated to dissolve the internal boundary, leaving the outer boundary - this is done to clip raster files (<i><b>KRC BOUNDARY LINE</b></i>)</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Two perimeters of this landslide study include: Slope Analysis and Vegetation Index. Landsat 9 Satellite imagery was geoprocessed by Raster Function - NVDI. Band 4 and Band 5 were chosen.</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>These feature layers were then processed by Spatial Analyst Tool -Reclass into 10 classes. Symbology were adjusted accordingly.</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>SRTM GeoTIFF was processed with Slope Analysis tool.</td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Slope Analysis and NVDI maps were clipped by KRC BOUNDARY LINE.</td>
+        </tr>
+        
+        <tr>
+            <td>7</td>
+            <td>Both raster maps requires to be reclassed for Spatial Analysis. They were reclassed into 10 classes. Symbology were adjusted.</td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td><i><b>"Landslide Susceptibility Map A"</i></b><br><br> Weighted Overlay tool was used to achieve a common measurement scale and weight. Both raster maps had an equal influence of 50%. <br><br> Value 1: Safest. <br> Value 10: Most Dangerous.</td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td><i><b>"Landslide Susceptibility Map B"</i></b><br><br>To further analyse, Raster Calculator was used to reclassify Map A into two main zone: Safe vs Dangerous.<br><br>(From Map A, Safe zone = Value 1 to 5. Danger Zone = Value 6 - 10) </td>
+        </tr>
+
+        <tr>
+            <td>10</td>
+            <td>Required layers were then shared on ArcGIS online account. 
+                <ul>
+                    <li>KRC BOUNDARY LINE</li>
+                    <li>KRC CAMP BOUNDARY</li>
+                    <li>Building Footprint KRC</li>
+                    <li>Landslide Susceptibility Map A</li>
+                    <li>Landslide Susceptibility Map B</li>
+                </ul>
+            </td>
+        </tr>
+
+        <tr>
+            <td>11</td>
+            <td>The uploaded layers were added and minor adjustments were made. Particularly, symbology, visibility range and labelling of camps.</td>
+        </tr>
+
+        <tr>
+            <td>12</td>
+            <td>Due to the lack of layer filtering on StoryMaps, two seperate maps were created: Map A and B.</td>
+        </tr>
+
+        <tr>
+            <td>13</td>
+            <td>Finally, the completed webmap was shared on StoryMaps.
+            </td>
+        </tr>
+
+        <br>
+    </table>
+    <h4><a href = "index.html"> << Return to homepage << </h4>           
+</body>
+
+</html>
